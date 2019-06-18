@@ -2,7 +2,6 @@ package pw.macdollanapp;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.ProgressBar;
-import javafx.scene.control.ProgressIndicator;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
@@ -36,16 +35,16 @@ public class Controller {
 
 
     @FXML
-    private ProgressIndicator PI1;
+    private ProgressBar PI1;
 
     @FXML
-    private ProgressIndicator PI2;
+    private ProgressBar PI2;
 
     @FXML
-    private ProgressIndicator PI3;
+    private ProgressBar PI3;
 
     @FXML
-    private ProgressIndicator PI4;
+    private ProgressBar PI4;
 
     //Random rand= new Random();
     @FXML
@@ -62,13 +61,13 @@ public class Controller {
 
 
 
-        double coordinates[][]={{191,363},{305,426},{362,381},{262,317}};
+        double coordinates[][]={{191,363},{300,426},{362,381},{262,317}};
 
-        ProgressIndicator tablePI[]={PI1,PI2,PI3,PI4};
+        ProgressBar tablePI[]={PI1,PI2,PI3,PI4};
 
         for(int i =1;i<5;i++){
             Table table= new Table(4,i,tablePI[i-1]);
-            ImageView tableIM= new ImageView(new Image ("pw/macdollanapp/tablesFree1.png"));
+            ImageView tableIM= new ImageView(new Image ("pw/macdollanapp/images/tablesFree1.png"));
             tableIM.setX(coordinates[i-1][0]);
             tableIM.setY(coordinates[i-1][1]);
             pane.getChildren().add(tableIM);
@@ -76,11 +75,11 @@ public class Controller {
             table.isFree().addListener((obs, oldStatus, newStatus) -> {
                 if( newStatus==false) {
 
-                    tableIM.setImage(new Image ("pw/macdollanapp/tablesTaken1.png"));
+                    tableIM.setImage(new Image ("pw/macdollanapp/images/tablesTaken1.png"));
                 }
                 else {
 
-                    tableIM.setImage(new Image ("pw/macdollanapp/tablesFree1.png"));
+                    tableIM.setImage(new Image ("pw/macdollanapp/images/tablesFree1.png"));
                 }
             });
         }

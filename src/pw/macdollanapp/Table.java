@@ -2,6 +2,7 @@ package pw.macdollanapp;
 
 import javafx.beans.property.BooleanProperty;
 import javafx.beans.property.SimpleBooleanProperty;
+import javafx.scene.control.ProgressBar;
 import javafx.scene.control.ProgressIndicator;
 
 public class Table {
@@ -9,9 +10,9 @@ public class Table {
     private SimpleBooleanProperty isFree= new SimpleBooleanProperty(this, "isFree");
     private int tableID;
 
-    private ProgressIndicator pi;
+    private ProgressBar pi;
 
-    public Table(int seats, int tableID,ProgressIndicator pi) {
+    public Table(int seats, int tableID, ProgressBar pi) {
         this.seats = seats;
         this.tableID = tableID;
         this.isFree.set(true);
@@ -44,7 +45,7 @@ public class Table {
         this.tableID = tableID;
     }
 
-    public ProgressIndicator getPi() {
+    public ProgressBar getPi() {
         return pi;
     }
 }
