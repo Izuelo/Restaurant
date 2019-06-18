@@ -1,2 +1,2 @@
-# Resteurant
+# Restaurant
 Multithread simulation of a restaurant
