@@ -1,2 +1,2 @@
 # Resteurant
-Multithread simulation of a resteurant
+Multithread simulation of a restaurant
